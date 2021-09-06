@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 17:01:21 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/05 17:04:10 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/06 15:05:42 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	ft_one_stack_left_b(t_stack **stack)
 ** returns -1 if stack == NULL */
 {
 	t_stack	*temp;
-	int		i;
 	int		len;
 
 	if (*stack == NULL)

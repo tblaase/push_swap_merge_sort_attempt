@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 17:25:00 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/05 17:56:57 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/06 16:37:53 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_big_sort_a(int argc, t_stack **stack_a, t_stack **stack_b)
 			}
 			(*stack_a)->swap = 0;
 			ft_pb(stack_a, stack_b);
-			if (ft_one_stack_left_a(stack_a) == 1)// &&ft_one_stack_a(stack_b == 0) maybe will fix it
+			if (ft_one_stack_left_a(stack_a) == 1)
 			{
 				ft_set_swap(stack_a, 0);
 				break ;
@@ -101,8 +101,6 @@ void	ft_big_sort_a(int argc, t_stack **stack_a, t_stack **stack_b)
 			{
 				if (*stack_a != NULL && (*stack_a)->next != NULL)
 				{
-					// ft_free(&temp_one);
-					// ft_free(&temp_two);
 					ft_lst_copy(stack_a, &temp_one);
 					ft_rra(&temp_one, 0);
 					ft_lst_copy(&temp_one, &temp_two);
@@ -113,8 +111,6 @@ void	ft_big_sort_a(int argc, t_stack **stack_a, t_stack **stack_b)
 						ft_pb(stack_a, stack_b);
 						(*stack_b)->swap = 1;
 						ft_rb(stack_b, 1);
-						// ft_free(&temp_one);
-						// ft_free(&temp_two);
 						if ((*stack_a)->next == NULL)
 							break ;
 						ft_lst_copy(stack_a, &temp_one);
@@ -129,22 +125,15 @@ void	ft_big_sort_a(int argc, t_stack **stack_a, t_stack **stack_b)
 				ft_rb(stack_b, 1);
 				break ;
 			}
-			// ft_free(&temp_one);
 			if (*stack_a == NULL || (*stack_a)->next == NULL)
 				break ;
-				// ft_free(&temp_one);
-				// ft_free(&temp_two);
 				ft_lst_copy(stack_a, &temp_one);
 				ft_rra(&temp_one, 0);
 				ft_lst_copy(&temp_one, &temp_two);
 				ft_rra(&temp_two, 0);
 		}
-		// ft_free(&temp_one);
-		// ft_free(&temp_two);
 		if (*stack_a != NULL)// this will prepare for the statement in line 161
 		{
-			// ft_free(&temp_one);
-			// ft_free(&temp_two);
 			ft_lst_copy(stack_a, &temp_one);
 			ft_rra(&temp_one, 0);
 			if ((*stack_a)->next != NULL)
@@ -169,17 +158,18 @@ void	ft_big_sort_a(int argc, t_stack **stack_a, t_stack **stack_b)
 			(*stack_b)->swap = 1;
 			ft_rb(stack_b, 1);
 		}
-		if (ft_one_stack_left_a(stack_a) == 1)// &&ft_one_stack_a(stack_b == 0) maybe will fix it
+		if (ft_one_stack_left_a(stack_a) == 1)
 		{
 			ft_set_swap(stack_a, 0);
 			break ;
 		}
 	}
-	while ((*stack_b)->swap == 0)// TESTTESTTEST
+	while ((*stack_b)->swap == 0)
 	{
 		(*stack_b)->swap = 1;
 		ft_rb(stack_b, 1);
-	} //TESTTESTTEST
-	// ft_free(&temp_one);
+	}
+	ft_free_all(&temp_one);
+	ft_free_all(&temp_two);
 	ft_big_sort_b(argc, stack_a, stack_b);
 }

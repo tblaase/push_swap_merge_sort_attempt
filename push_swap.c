@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 12:15:14 by tblaase           #+#    #+#             */
-/*   Updated: 2021/09/05 18:01:57 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/09/06 16:28:44 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	t_stack		*stack_a;
 	t_stack		*stack_b;
 
-	if (ft_input_error(argc, argv) == 1)
+	if (ft_input_error(argv) == 1)
 	{
 		write(1, "Error\n", 6);
 		return (1);
@@ -48,13 +48,13 @@ int	main(int argc, char **argv)
 	// stack_b = ft_fill_list(4, (argv + 4));
 	//
 	stack_a = ft_fill_list(argc, argv);
-	ft_display_list(stack_a);
+	// ft_display_list(stack_a);
 	// ft_display_list(stack_b);
 	if (ft_if_sorted_a(argc, &stack_a) == 1)
 		return (0);
 	// ft_big_sort_a(argc, &stack_a, &stack_b);
 	ft_sort(argc, &stack_a, &stack_b);
-	ft_display_list(stack_a);
+	// ft_display_list(stack_a);
 	// ft_display_list(stack_b);
 	//
 	// printf("\n%d\n\n", i);
@@ -65,6 +65,3 @@ int	main(int argc, char **argv)
 	// fscanf(stdin, "c");
 	return (0);
 }
-
-
-///////////////// merge 2 stacks into the top stack, then push next over, might be possible with i counter ? /////////
