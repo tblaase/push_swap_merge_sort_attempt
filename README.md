@@ -43,3 +43,7 @@ Or if you have the visualizer i used:<br>
 ```
 python3 pyviz.py `ruby -e "puts (1..20).to_a.shuffle.join(' ')"`
 ```
+
+<br>
+This is an example of my code working with 50 numbers.<br>
+<img src="images/example.gif" >
