@@ -23,7 +23,7 @@ The Code you might find inside the Libft-folder, is awfull, since alot of the fu
 But the main algorithm works mostly.<br>
 ## How to use the algorithm
 <br>
-Since i didn't finish the project, the MAKEFILE still WIP.<br>
+Since i didn't finish the project, the Makefile still WIP.<br>
 <br>
 Compile with:<br>
 
