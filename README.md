@@ -15,6 +15,7 @@ For 100 random numbers this algorithm needs roughly 1400-1600 actions. Requireme
 For 500 random numbers this algorithm needs roughly 10500 actions. Requirement is less than 11500 actions.<br>
 If you want to see the satisfying sorting run it with a visualizer:<br>
 I always used [this](https://github.com/o-reo/push_swap_visualizer "github.com/o-reo/push_swap_visualizer") visualizer.<br>
+The checker that you can see in my files, is the cecker suppliedd by 42.<br>
 
 ---
 
